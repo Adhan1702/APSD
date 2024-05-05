@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int total = 0;
+    int n = 10;
+    for(int i = n; i >= 2; i -= 2) {
+        total += i;
+        for(int j = n; j >= i; j -= 2) {
+            cout << j;
+            if(j != i) {
+                cout << " + ";
+            }
+        }
+        cout << " = " << total << endl;
+    }
+    cout << "----------" << endl;
+    cout << total << endl;
+    return 0;
+}
